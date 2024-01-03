@@ -12,7 +12,7 @@ const gasfeeObj = document.querySelector(".gasfee");
 const openseaObj = document.querySelector(".opensea");
 
 window.onload = async function () {
-    if(mobile()){
+    if(mobile() && (window.location.hostname == "mjdnft.com")){
         location.href="https://metamask.app.link/dapp/mjdnft.com/mint";
     }
     web3 = new Web3(window.ethereum);
