@@ -16,9 +16,30 @@ window.onload = async function () {
     await check_status();
 };
 
-function mobile() {return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);}
+const loginWallet = async () => {
+    try {
+        await ethereum.enable();
+    }
+    catch (e) {
+        let pcDevice = "win16|win32|win64|mac|macintel";
+        if (navigator.platform) {
+            // 모바일 환경일 경우
+            if (pcDevice.indexOf(navigator.platform.toLowerCase()) < 0) {
+                exeDeepLink();
+            } else {
+            }
+        }
+    }
+}
+
+const exeDeepLink = () => {
+    let url = "https://metamask.app.link/dapp/mjdnft.com/mint";
+    window.location.href = url;
+}
 
 async function connect() {
+
+    loginWallet();
     
     if (window.ethereum) {
         let isContinue = false;
