@@ -12,9 +12,6 @@ const gasfeeObj = document.querySelector(".gasfee");
 const openseaObj = document.querySelector(".opensea");
 
 window.onload = async function () {
-    if(mobile() && (window.location.hostname == "mjdnft.com")){
-        location.href="https://metamask.app.link/dapp/mjdnft.com/mint";
-    }
     web3 = new Web3(window.ethereum);
     await check_status();
 };
@@ -22,6 +19,10 @@ window.onload = async function () {
 function mobile() {return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);}
 
 async function connect() {
+    if(mobile() && (window.location.hostname == "mjdnft.com")){
+        location.href="https://metamask.app.link/dapp/mjdnft.com/mint";
+    }
+    
     if (window.ethereum) {
         let isContinue = false;
 
