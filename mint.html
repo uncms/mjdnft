@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="강릉 명주동의 매력을 NFT로 만나보세요!">
+        <meta name="keywords" content="강릉, 명주동, 명주동NFT, 명주동엔에프티">
+        
+        <meta property="og:title" content="명주동NFT">
+        <meta property="og:description" content="강릉 명주동의 매력을 NFT로 만나보세요!">
+        <meta property="og:image" content="/img/thumbnail.jpg">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+        <link rel="manifest" href="/fav/site.webmanifest">
+        <link rel="mask-icon" href="/fav/safari-pinned-tab.svg" color="#101010">
+        <meta name="msapplication-TileColor" content="#101010">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>명주동NFT</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+        <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+        <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css"/>
+        
+        <script src="https://cdn.jsdelivr.net/npm/web3@4.0.3/dist/web3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/8.0.2/bignumber.js" integrity="sha512-XQDG6H87RgMf+aNFwDPCUcFwUf3t9liyqN/2BkJ8KGixupbjPwQHNhypNA972mLIkg4KPo4lkGmqAf3yfDz8hw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <link rel="stylesheet" href="css/mint.css">
+        <script src="js/config.js"></script>
+        <script defer src="js/mint.js"></script>
+    </head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <h1 onclick="home()">
+                <img class="logo" src="img/logo.png" alt="명주동NFT">
+            </h1>
+            <a href="/">웹사이트 둘러보기</a>
+        </div>
+    </header>
+
+    <img class="location" src="img/location_1.png" alt="강릉시 명주동">
+
+    <section>
+        <div class="section-wrapper">
+            <div class="col-01">
+                <div class="main-wrapper">
+                    <div>
+                        <img src="img/ic_location.png" alt="위치 아이콘">
+                        <p>강릉 임영관 삼문 <span> | 국보 제51호 고려시대 강릉 객사의 문</span></p>
+                    </div>
+                </div>
+                <div class="sub-wrapper">
+                    <img src="img/nft_01.jpg" alt="강릉 임영관 삼문">
+                    <img src="img/nft_02.jpg" alt="햇살 박물관">
+                    <img src="img/nft_03.jpg" alt="강릉 커피 축제">
+                </div>
+            </div>
+            <div class="col-02">
+                <div class="step">
+                    <div class="step-title">
+                        <h2>01 메타마스크를 연결해주세요</h2>
+                        <div onclick="connect()">
+                            <img src="img/ic_polygon.png" alt="폴리곤 아이콘">
+                            <p>메타마스크 연결</p>
+                        </div>
+                    </div>
+                    <div class="step-desc">
+                        <p class="wallet">-지갑주소 : </p>
+                        <p class="balance">-보유잔액 : </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-title">
+                        <h2>02 명주동NFT를 구매하세요</h2>
+                        <div onclick="publicMint()">
+                            <img src="img/ic_buy.png" alt="구매 아이콘">
+                            <p>NFT 구매(민팅)</p>
+                        </div>
+                    </div>
+                    <div class="step-desc">
+                        <p class="price">-구매금액 : </p>
+                        <p class="gasfee">-예상수수료 : </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-title">
+                        <h2>03 오픈씨에서 확인해보세요</h2>
+                        <div onclick="goOpensea()">
+                            <img src="img/ic_opensea.png" alt="오픈씨 아이콘">
+                            <p>오픈씨 둘러보기</p>
+                        </div>
+                    </div>
+                    <div class="step-desc">
+                        <p class="opensea">- 오픈씨URL : testnets.opensea.io/kr/collection/tmjd</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>COPYRIGHT 2023 MYEONGJU-DONG NFT. <br class="footer-hidden">ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+</html>

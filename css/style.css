@@ -1,0 +1,860 @@
+:root {
+    --color-black: #101010;
+    --color-gray: #909090;
+    --color-white: #FFFFFF;
+
+    --color-background: #FAFAFA;
+    --color-line: #E1E1E1;
+
+    --color-highlight: #FF8000;
+    --color-highlight-sub: #FFC400;
+    
+    --font-title-1: 48px;
+    --font-title-2: 40px;
+    --font-title-3: 28px;
+
+    --font-l: 24px;
+    --font-m: 20px;
+    --font-s: 18px;
+
+    --size-xl: 120px;
+    --size-l: 80px;
+    --size-m: 60px;
+    --size-s: 40px;
+    --size-xs: 20px;
+}
+
+/* ---------------- 공통 영역 ---------------- */
+
+::selection {
+    background-color: var(--color-highlight);
+    color: var(--color-black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 360px;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--color-white);
+}
+
+section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: var(--size-xl);
+    padding-bottom: var(--size-xl);
+}
+
+.section-wrapper{
+    max-width: 1800px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: var(--size-xs);
+    padding-right: var(--size-xs);
+}
+
+.section-tag{
+    font-family: 'GmarketSans', sans-serif;
+    font-size: var(--font-s);
+    font-weight: 700;
+    color: var(--color-highlight);
+    margin-bottom: var(--size-xs);
+}
+
+.section-title{
+    font-family: 'GmarketSans', sans-serif;
+    font-size: var(--font-title-1);
+    font-weight: 700;
+    color: var(--color-black);
+    word-break: keep-all;
+}
+
+/* ---------------- HEADER 영역 ---------------- */
+
+header{
+    position: fixed;
+    min-width: 360px;
+    width: 100%;
+    height: var(--size-l);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFFCC;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-line);
+    z-index: 10;
+}
+
+.header-wrapper{
+    max-width: 1800px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: var(--size-xs);
+    padding-right: var(--size-xs);
+}
+
+.header-wrapper > h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    height: 20px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+nav > ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav > ul > li > a{
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-gray);
+    padding: var(--size-xs);
+    transition: 0.25s;
+}
+
+nav > ul > li > a:hover{
+    color: var(--color-highlight);
+}
+
+.header-wrapper > a{
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    padding: 12px 24px;
+    border-radius: 48px;
+    transition: 0.25s;
+}
+
+.header-wrapper > a:hover{
+    opacity: 0.75;
+}
+
+/* ---------------- MAIN 영역 ---------------- */
+
+.location{
+    max-width: 1800px;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    margin-top: var(--size-l);
+    padding: var(--size-s) var(--size-xs);
+}
+
+.banner-wrapper{
+    max-width: 1800px;
+    width: 100%;
+    padding-left: var(--size-xs);
+    padding-right: var(--size-xs);
+}
+
+.banner{
+    max-width: 1800px;
+    width: 100%;
+    height: 640px;
+    background-image: url(/img/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: var(--size-xs);
+    padding: var(--size-s);
+}
+
+.banner > div{
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #101010CC;
+    backdrop-filter: blur(8px);
+    padding: var(--size-xs) var(--size-s);
+    border-radius: 12px;
+}
+
+.banner > div > img{
+    width: var(--font-s);
+    height: var(--font-s);
+    object-fit: contain;
+}
+
+.banner > div > p{
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: var(--font-s);
+    font-weight: 600;
+    color: var(--color-white);
+    margin-left: 8px;
+}
+
+.banner > div > p > span{
+    font-weight: 300;
+}
+
+/* ---------------- PROJECT 영역 ---------------- */
+
+#project > .section-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    column-gap: var(--size-s);
+}
+
+#project > .section-wrapper > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.project-desc{
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: var(--font-l);
+    font-weight: 400;
+    color: var(--color-black);
+    line-height: 150%;
+    word-break: keep-all;
+    margin-top: var(--size-m);
+}
+
+#project > .section-wrapper > img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: var(--size-xs);
+}
+
+/* ---------------- BENEFIT 영역 ---------------- */
+
+#benefit{
+    background-color: var(--color-background);
+}
+
+.benefit-wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--size-xs);
+    row-gap: var(--size-s);
+    margin-top: var(--size-l);
+}
+
+.benefit{
+    position: relative;
+    height: 400px;
+    line-height: 0;
+    overflow: hidden;
+    border-radius: var(--size-xs);
+    cursor: pointer;
+}
+
+.benefit > img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.intro{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: calc(var(--font-title-3) + var(--size-s) * 2);
+    background-color: #101010CC;
+    backdrop-filter: blur(8px);
+    padding: var(--size-s);
+    transition: 0.25s;
+}
+
+.intro > h3{
+    font-family: 'GmarketSans', sans-serif;
+    font-size: var(--font-title-3);
+    font-weight: 500;
+    line-height: 100%;
+    color: var(--color-white);
+    word-break: keep-all;
+}
+
+.intro > h3::after{
+    position: absolute;
+    right: var(--size-s);
+    content: "+";
+    font-weight: 500;
+}
+
+.intro > p{
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: var(--font-m);
+    font-weight: 300;
+    color: var(--color-white);
+    line-height: 150%;
+    margin-top: var(--size-xs);
+    visibility: hidden;
+    word-break: keep-all;
+    opacity: 0;
+    transition: 0.25s;
+}
+
+.benefit:hover > .intro{
+    height: calc(var(--font-title-3) + (var(--size-s) * 2) + var(--size-xs) + (var(--font-m) * 4.5));
+}
+
+.benefit:hover > .intro > p{
+    visibility: visible;
+    opacity: 1;
+}
+
+.benefit:hover > .intro > h3::after{
+    content: "-";
+}
+
+/* ---------------- DONATION 영역 ---------------- */
+
+.donation-wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: var(--size-s);
+}
+
+.donation-desc{
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: var(--font-l);
+    font-weight: 400;
+    color: var(--color-black);
+    line-height: 150%;
+    word-break: keep-all;
+    margin-top: var(--size-m);
+    margin-bottom: var(--size-s);
+}
+
+.donation-wrapper > img{
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: var(--size-xs);
+}
+
+.donation-info > a{
+    display: block;
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: var(--font-s);
+    font-weight: 600;
+    color: var(--color-white);
+    line-height: 100%;
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-highlight), var(--color-highlight-sub));
+    padding: var(--size-xs) var(--size-s);
+    border-radius: 12px;
+}
+
+
+.donationSwiper {
+    width: 100%;
+    height: 100%;
+    margin-top: var(--size-s);
+}
+
+.donationSwiper img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.donationSwiper .swiper-pagination-bullet-active {
+    background: #005CA7;
+}
+/* ---------------- NFT 영역 ---------------- */
+
+#nft{
+    background-color: var(--color-background);
+}
+
+.nftSwiper {
+    width: 100%;
+    height: 100%;
+    margin-top: var(--size-l);
+}
+
+.nftSwiper .swiper-slide {
+    width: 100%;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: var(--size-xs);
+    border: 1px solid #F5F5F5;
+}
+
+.nftSwiper .swiper-slide > img {
+    width: 100%;
+    object-fit: contain;
+    border-top-left-radius: var(--size-xs);
+    border-top-right-radius: var(--size-xs);
+}
+
+.nftSwiper .swiper-slide > .nft-tag {
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: var(--font-s);
+    font-weight: 400;
+    color: var(--color-highlight);
+    margin-top: var(--size-s);
+    padding: 0 var(--size-s);
+}
+
+.nftSwiper .swiper-slide > h3 {
+    font-family: 'GmarketSans', sans-serif;
+    font-size: var(--font-title-3);
+    font-weight: 500;
+    line-height: 100%;
+    color: var(--color-black);
+    word-break: keep-all;
+    margin-top: 12px;
+    padding: 0 var(--size-s);
+}
+
+.nftSwiper .swiper-slide > .nft-desc {
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: var(--font-m);
+    font-weight: 400;
+    color: var(--color-gray);
+    line-height: 150%;
+    margin-top: var(--size-xs);
+    padding: 0 var(--size-s);
+
+    
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    height: 6em;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nftSwiper .swiper-slide > a {
+    width: calc(100% - var(--size-l));
+    display: block;
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: var(--font-s);
+    font-weight: 600;
+    color: var(--color-white);
+    line-height: 100%;
+    word-break: keep-all;
+    text-align: center;
+    margin: var(--size-s);
+    border-radius: 8px;
+    padding: var(--size-xs) var(--size-s);
+    background: linear-gradient(135deg, var(--color-highlight), var(--color-highlight-sub));
+}
+
+.swiper-pagination{
+    position: relative;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    margin-top: var(--size-s);
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: var(--color-gray);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--color-highlight);
+}
+
+/* ---------------- GUIDE 영역 ---------------- */
+
+#guide .section-tag, #guide .section-title{
+    width: 100%;
+}
+
+.guide-wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: var(--size-xs);
+    margin-top: var(--size-l);
+}
+
+.guide-tag{
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 4fr;
+    row-gap: var(--size-xs);
+    height: 645px;
+    overflow: hidden;
+}
+
+.guide-tag > h3{
+    width: 100%;
+    font-family: 'GmarketSans', sans-serif;
+    font-size: var(--font-m);
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--color-gray);
+    border: 1px solid var(--color-line);
+    background-color: var(--color-white);
+    padding: var(--size-xs);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.guide-tag > h3 > span{
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-gray);
+    transition: 0.25s;
+}
+
+.guide-tag > h3:hover{
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border: 1px solid var(--color-black);
+}
+
+.guide-tag > h3:hover > span{
+    color: var(--color-white);
+}
+
+.guide-tag > h3.clicked-tag{
+    color: var(--color-white);
+    background-color: var(--color-black);
+}
+
+
+.guide-tag > h3.clicked-tag > span{
+    color: var(--color-white);
+}
+
+.guide-video > iframe{
+    display: none;
+    width: 100%;
+    height: 645px;
+    border-radius: var(--size-xs);
+}
+
+.guide-video > iframe.clicked-video{
+    display: block;
+}
+
+/* ---------------- FOOTER 영역 ---------------- */
+
+footer{
+    width: 100%;
+    background: var(--color-black);
+    padding: calc((var(--size-m)) / 2) var(--size-xs);
+}
+
+footer > p{
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-white);
+    line-height: 100%;
+    text-align: center;
+    line-height: 150%;
+    word-break: keep-all;
+}
+
+.footer-hidden{
+    display: none;
+}
+
+
+@media screen and (max-width: 1800px) {
+    .guide-video > iframe{
+        height: calc((100vw - var(--size-s) - var(--size-xs)) / 8 * 3 );
+    }
+
+    .guide-tag{
+        grid-template-rows: 1fr 1fr 1fr 1fr 4fr;
+        height: calc((100vw - var(--size-s) - var(--size-xs)) / 8 * 3 );
+        min-height: 472px;
+    }
+
+}
+
+@media screen and (max-width: 1320px) {
+
+    :root {
+        --font-title-3: 26px;
+    }
+
+    .banner{
+        height: 560px;
+    }
+
+    .project-hidden{
+        display: none;
+    }
+
+    .section-title{
+        line-height: 135%;
+    }
+
+    .benefit{
+        height: 360px;
+    }
+
+    .benefit > img{
+        height: 360px;
+    }
+
+    .donation-hidden{
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+    :root {
+        --font-title-1: 42px;
+        --font-title-3: 24px;
+    
+        --font-l: 22px;
+        --font-m: 19px;
+        --font-s: 17px;
+    
+        --size-xl: 108px;
+        --size-l: 72px;
+        --size-m: 54px;
+        --size-s: 36px;
+        --size-xs: 18px;
+    }
+
+    .logo{
+        height: 19px;
+    }
+
+    .banner{
+        height: 480px;
+    }
+
+    .project-hidden{
+        display: block;
+    }
+
+    #project > .section-wrapper{
+        grid-template-columns: 1fr;
+        row-gap: var(--size-s);
+    }
+    
+    #project > .section-wrapper > img{
+        max-width: 576px;
+    }
+
+    .benefit-wrapper{
+        grid-template-columns: 1fr;
+        row-gap: var(--size-xs);
+    }
+
+    .benefit{
+        height: 320px;
+    }
+
+    .benefit > img{
+        height: 320px;
+    }
+
+    .benefit:hover > .intro{
+        height: calc(var(--font-title-3) + (var(--size-s) * 2) + var(--size-xs) + (var(--font-m) * 3));
+    }
+
+    .donation-hidden{
+        display: block;
+    }
+
+    .donation-wrapper{
+        grid-template-columns: 1fr;
+        row-gap: var(--size-s);
+    }
+
+    .guide-wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .guide-tag{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        column-gap: var(--size-xs);
+        height: 100%;
+        min-height: 0;
+        margin-bottom: var(--size-s);
+    }
+
+    .guide-video > iframe{
+        height: calc((100vw - var(--size-s)) / 16 * 9 );
+        min-height: 184px;
+    }
+
+    nav > ul > li > a{
+        font-size: 15px;
+    }
+
+    .header-wrapper > a{
+        font-size: 15px;
+    }
+
+    footer > p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --font-title-1: 36px;
+        --font-title-3: 22px;
+    
+        --font-l: 20px;
+        --font-m: 18px;
+        --font-s: 16px;
+    
+        --size-xl: 96px;
+        --size-l: 64px;
+        --size-m: 48px;
+        --size-s: 32px;
+        --size-xs: 16px;
+    }
+
+    .logo{
+        height: 18px;
+    }
+
+    .banner{
+        height: 400px;
+    }
+
+    nav > ul{
+        display: none;
+    }
+
+    .benefit{
+        height: 280px;
+    }
+
+    .benefit > img{
+        height: 280px;
+    }
+
+    nav > ul > li > a{
+        font-size: 14px;
+    }
+
+    .header-wrapper > a{
+        font-size: 14px;
+    }
+
+    .nftSwiper .swiper-slide > .nft-tag {
+        margin-top: var(--size-s);
+        padding: 0 var(--size-xs);
+    }
+
+    .nftSwiper .swiper-slide > h3 {
+        padding: 0 var(--size-xs);
+    }
+
+    .nftSwiper .swiper-slide > .nft-desc {
+        margin-top: var(--size-xs);
+        padding: 0 var(--size-xs);
+    }
+
+    .nftSwiper .swiper-slide > a {
+        width: calc(100% - var(--size-s));
+        margin: var(--size-s) var(--size-xs);
+        padding: var(--size-xs);
+    }
+    
+    footer > p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .location{
+        content: url(/img/location_2.png);
+    }
+    
+    .banner{
+        height: 320px;
+    }
+
+    .banner > div > p > span{
+        display: none;
+    }
+
+    .project-hidden{
+        display: none;
+    }
+
+    .benefit{
+        height: 240px;
+    }
+
+    .benefit > img{
+        height: 240px;
+    }
+
+    .benefit:hover > .intro{
+        height: calc(var(--font-title-3) + (var(--size-s) * 2) + var(--size-xs) + (var(--font-m) * 4.5));
+    }
+
+    .donation-hidden{
+        display: none;
+    }
+
+    .guide-tag > .guide > br{
+        display: none;
+    }
+
+    .guide-tag{
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .footer-hidden{
+        display: block;
+    }
+}
